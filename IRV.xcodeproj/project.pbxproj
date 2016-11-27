@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A95A845D1DEA2065008BCA93 /* IRVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95A845C1DEA2065008BCA93 /* IRVViewController.swift */; };
+		A95A845F1DEA525B008BCA93 /* VoterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95A845E1DEA525B008BCA93 /* VoterViewController.swift */; };
 		A97D3E5C1DE20C5800FFADD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97D3E5B1DE20C5800FFADD8 /* AppDelegate.swift */; };
-		A97D3E5E1DE20C5800FFADD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97D3E5D1DE20C5800FFADD8 /* ViewController.swift */; };
 		A97D3E611DE20C5800FFADD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A97D3E5F1DE20C5800FFADD8 /* Main.storyboard */; };
 		A97D3E641DE20C5800FFADD8 /* IRV.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A97D3E621DE20C5800FFADD8 /* IRV.xcdatamodeld */; };
 		A97D3E661DE20C5800FFADD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A97D3E651DE20C5800FFADD8 /* Assets.xcassets */; };
@@ -35,9 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A91B13191DE8C96E0047E1F9 /* TODO */ = {isa = PBXFileReference; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
+		A95A845C1DEA2065008BCA93 /* IRVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRVViewController.swift; sourceTree = "<group>"; };
+		A95A845E1DEA525B008BCA93 /* VoterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoterViewController.swift; sourceTree = "<group>"; };
 		A97D3E581DE20C5800FFADD8 /* IRV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97D3E5B1DE20C5800FFADD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A97D3E5D1DE20C5800FFADD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A97D3E601DE20C5800FFADD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A97D3E631DE20C5800FFADD8 /* IRV.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IRV.xcdatamodel; sourceTree = "<group>"; };
 		A97D3E651DE20C5800FFADD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,12 +103,14 @@
 			isa = PBXGroup;
 			children = (
 				A97D3E5B1DE20C5800FFADD8 /* AppDelegate.swift */,
-				A97D3E5D1DE20C5800FFADD8 /* ViewController.swift */,
+				A95A845C1DEA2065008BCA93 /* IRVViewController.swift */,
+				A95A845E1DEA525B008BCA93 /* VoterViewController.swift */,
 				A97D3E5F1DE20C5800FFADD8 /* Main.storyboard */,
 				A97D3E651DE20C5800FFADD8 /* Assets.xcassets */,
 				A97D3E671DE20C5800FFADD8 /* LaunchScreen.storyboard */,
 				A97D3E6A1DE20C5800FFADD8 /* Info.plist */,
 				A97D3E621DE20C5800FFADD8 /* IRV.xcdatamodeld */,
+				A91B13191DE8C96E0047E1F9 /* TODO */,
 			);
 			path = IRV;
 			sourceTree = "<group>";
@@ -265,9 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A97D3E5E1DE20C5800FFADD8 /* ViewController.swift in Sources */,
 				A97D3E5C1DE20C5800FFADD8 /* AppDelegate.swift in Sources */,
+				A95A845D1DEA2065008BCA93 /* IRVViewController.swift in Sources */,
 				A97D3E641DE20C5800FFADD8 /* IRV.xcdatamodeld in Sources */,
+				A95A845F1DEA525B008BCA93 /* VoterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +524,7 @@
 				A97D3E851DE20C5900FFADD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A97D3E861DE20C5900FFADD8 /* Build configuration list for PBXNativeTarget "IRVTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +533,7 @@
 				A97D3E881DE20C5900FFADD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A97D3E891DE20C5900FFADD8 /* Build configuration list for PBXNativeTarget "IRVUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +542,7 @@
 				A97D3E8B1DE20C5900FFADD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
