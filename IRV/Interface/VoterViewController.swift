@@ -15,17 +15,73 @@ class VoterViewController: IRVViewController {
     
     // MARK: - Outlets
     
+    @IBOutlet weak var voterLabel: UILabel!
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
         title = "Voter"
         
-        // Is user logged in?
+    }
+    
+    // MARK: - Actions
+    @IBAction func addAction(_ sender: Any) {
+        addVoters()
+    }
+    
+    @IBAction func listAction(_ sender: Any) {
+        listVoters()
+    }
+    
+    @IBAction func deleteAction(_ sender: Any) {
+        deleteVoters()
+    }
+    
+    // MARK: - Voters
+    
+    func deleteVoters() {
+        dataMan.deleteAllVoters()
+    }
+    
+    func addVoters() {
         
+        dataMan.getAllVoters { (voters) in
+            
+            guard voters.count == 0 else { return }
+            
+            let voterNames = ["Bill Anderson",
+                              "Kimberly Anderson",
+                              "Steven Hoover",
+                              "Samantha Anderson",
+                              "Simba"
+            ]
+            
+            for nameString in voterNames {
+                self.dataMan.addVoter(nameString: nameString)
+            }
+            
+        }
         
+    }
+    
+    func listVoters() {
+        
+        dataMan.getAllVoters { (voters) in
+            
+            var voterString = ""
+            for voter in voters {
+                guard let voterName = voter.voterName else { continue }
+                voterString += voterName + "\r"
+            }
+            
+            OperationQueue.main.addOperation {
+                self.voterLabel.text = voterString
+            }
+            
+            
+        }
         
     }
     

@@ -13,6 +13,8 @@ class IRVViewController: UIViewController {
     
     // MARK: - Properties
     
+    let dataMan = DataManager.singleton
+    
     // MARK: - Outlets
     
     // MARK: - Lifecycle

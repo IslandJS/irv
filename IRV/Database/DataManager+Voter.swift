@@ -11,42 +11,51 @@ import CoreData
 
 extension DataManager {
     
-    func addVoter(nameString: String) {
+    func deleteAllVoters() {
         
         persistentContainer.performBackgroundTask { context in
             
-            // Add a voter
-            let voter = IRVVoter(context: context)
-            
-            voter.voterName = nameString
+            let request: NSFetchRequest<IRVVoter> = IRVVoter.fetchRequest()
             do {
-                try context.save()
+                let searchResults = try context.fetch(request)
+                searchResults.forEach { context.delete($0) }
             } catch {
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                print("Error with request: \(error)")
             }
+            self.save(context: context)
             
         }
         
     }
     
-//    func listVoters() -> [IRVVoter]? {
-//        
-//        persistentContainer.performBackgroundTask { context in
-//            
-//            // Get and print all voters
-//            let request: NSFetchRequest<IRVVoter> = IRVVoter.fetchRequest()
-//            do {
-//                let searchResults = try context.fetch(request)
-//                return searchResults
-//            } catch {
-//                return nil
-//                print("Error with request: \(error)")
-//            }
-//            
-//        }
-//        
-//    }
+    func addVoter(nameString: String) {
+        
+        let context = self.persistentContainer.newBackgroundContext()
+        context.performAndWait {
+            
+            let voter = IRVVoter(context: context)
+            voter.voterName = nameString
+            self.save(context: context)
+            
+        }
+        
+    }
+    
+    func getAllVoters() -> [IRVVoter] {
+        
+        persistentContainer.performBackgroundTask { context in
+            var voterArray = [IRVVoter]()
+            let request: NSFetchRequest<IRVVoter> = IRVVoter.fetchRequest()
+            do {
+                let searchResults = try context.fetch(request)
+                voterArray = searchResults
+            } catch {
+                print("Error with request: \(error)")
+            }
+            
+        }
+        
+    }
     
     
 }

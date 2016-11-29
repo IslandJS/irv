@@ -3,36 +3,11 @@ Graphics:
     Wireframe
 
 Xcode:
+
+    Structs for passing entities?
+
     Core Data:
-        IRVCandidate
-            candidateName
-            candidateImage
-            candidateStatement
-            << IRVSlate
-        IRVSlate
-            slateName
-            slateImage
-            slateDescription
-            >> IRVCandidate
-            << IRVElection
-        IRVElection
-            electionName
-            electionImage
-            electionStartDate
-            electionEndDate
-            > IRVSlate
-            >> IRVVoter
-        IRVVoter
-            voterName
-            voterImage
-            voterStatement
-            << IRVElection
-            >> IRVBallot
-        IRVBallot
-            ballotComment
-            < IRVElection
-            > IRVVoter
-            > IRVCandidate
+        Threading
 
     Game Kit:
         Peer to Peer
