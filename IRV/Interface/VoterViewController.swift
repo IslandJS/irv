@@ -20,13 +20,13 @@ class VoterViewController: IRVViewController {
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         title = "Voter"
-        
+        listVoters()
     }
     
     // MARK: - Actions
+    
     @IBAction func addAction(_ sender: Any) {
         addVoters()
     }
@@ -42,12 +42,14 @@ class VoterViewController: IRVViewController {
     // MARK: - Voters
     
     func deleteVoters() {
-        dataMan.deleteAllVoters()
+        dataMan.deleteAllVoters {
+            self.listVoters()
+        }
     }
     
     func addVoters() {
         
-        dataMan.getAllVoters { (voters) in
+        dataMan.getAllVoters { voters in
             
             guard voters.count == 0 else { return }
             
@@ -55,11 +57,10 @@ class VoterViewController: IRVViewController {
                               "Kimberly Anderson",
                               "Steven Hoover",
                               "Samantha Anderson",
-                              "Simba"
-            ]
+                              "Simba"]
             
-            for nameString in voterNames {
-                self.dataMan.addVoter(nameString: nameString)
+            self.dataMan.addVoters(nameStrings: voterNames) {
+                self.listVoters()
             }
             
         }
@@ -68,7 +69,7 @@ class VoterViewController: IRVViewController {
     
     func listVoters() {
         
-        dataMan.getAllVoters { (voters) in
+        dataMan.getAllVoters { voters in
             
             var voterString = ""
             for voter in voters {
@@ -79,7 +80,6 @@ class VoterViewController: IRVViewController {
             OperationQueue.main.addOperation {
                 self.voterLabel.text = voterString
             }
-            
             
         }
         

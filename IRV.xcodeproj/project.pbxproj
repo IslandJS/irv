@@ -138,9 +138,9 @@
 		B48397151DECF886007A1A95 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				B48397161DECF907007A1A95 /* IRV.xcdatamodeld */,
 				B483971A1DECFA9D007A1A95 /* DataManager.swift */,
 				B41B9EA21DECFEDA006D83CB /* DataManager+Voter.swift */,
+				B48397161DECF907007A1A95 /* IRV.xcdatamodeld */,
 			);
 			path = Database;
 			sourceTree = "<group>";

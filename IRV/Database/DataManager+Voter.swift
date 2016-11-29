@@ -11,51 +11,74 @@ import CoreData
 
 extension DataManager {
     
-    func deleteAllVoters() {
+    // MARK: - TypeAlias
+    
+    typealias voterClosure = ([IRVVoter]) -> (Void)
+    
+    // MARK: - Voters
+    
+    func deleteAllVoters(completion: @escaping voidClosure) {
+        
+        persistentContainer.performBackgroundTask { context in
+            context.performAndWait {
+                
+                let request: NSFetchRequest<IRVVoter> = IRVVoter.fetchRequest()
+                do {
+                    let searchResults = try context.fetch(request)
+                    
+                    searchResults.forEach { voter in
+                        context.delete(voter)
+                    }
+                } catch {
+                    print("Error with request: \(error)")
+                }
+                self.save(context: context)
+                
+            }
+            completion()
+        }
+        
+    }
+    
+    func addVoter(nameString: String, completion: @escaping voidClosure) {
+        addVoters(nameStrings: [nameString], completion: completion)
+    }
+    
+    func addVoters(nameStrings: [String], completion: @escaping voidClosure) {
+        
+        persistentContainer.performBackgroundTask { context in
+            context.performAndWait {
+                
+                nameStrings.forEach({ (nameString) in
+                    let voter = IRVVoter(context: context)
+                    voter.voterName = nameString
+                })
+                
+                self.save(context: context)
+                
+            }
+            completion()
+        }
+        
+    }
+    
+    func getAllVoters(completion: @escaping voterClosure) {
         
         persistentContainer.performBackgroundTask { context in
             
             let request: NSFetchRequest<IRVVoter> = IRVVoter.fetchRequest()
+            let descriptor = NSSortDescriptor(key: "voterName", ascending: true, selector: #selector(NSString.localizedStandardCompare(_:)))
+            request.sortDescriptors = [descriptor]
             do {
                 let searchResults = try context.fetch(request)
-                searchResults.forEach { context.delete($0) }
+                completion(searchResults)
             } catch {
                 print("Error with request: \(error)")
-            }
-            self.save(context: context)
-            
-        }
-        
-    }
-    
-    func addVoter(nameString: String) {
-        
-        let context = self.persistentContainer.newBackgroundContext()
-        context.performAndWait {
-            
-            let voter = IRVVoter(context: context)
-            voter.voterName = nameString
-            self.save(context: context)
-            
-        }
-        
-    }
-    
-    func getAllVoters() -> [IRVVoter] {
-        
-        persistentContainer.performBackgroundTask { context in
-            var voterArray = [IRVVoter]()
-            let request: NSFetchRequest<IRVVoter> = IRVVoter.fetchRequest()
-            do {
-                let searchResults = try context.fetch(request)
-                voterArray = searchResults
-            } catch {
-                print("Error with request: \(error)")
+                completion([IRVVoter]())
             }
             
         }
         
     }
-    
     
 }
