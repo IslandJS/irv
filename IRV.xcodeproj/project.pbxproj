@@ -11,11 +11,13 @@
 		A95A845F1DEA525B008BCA93 /* VoterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95A845E1DEA525B008BCA93 /* VoterViewController.swift */; };
 		A97D3E5C1DE20C5800FFADD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97D3E5B1DE20C5800FFADD8 /* AppDelegate.swift */; };
 		A97D3E611DE20C5800FFADD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A97D3E5F1DE20C5800FFADD8 /* Main.storyboard */; };
-		A97D3E641DE20C5800FFADD8 /* IRV.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A97D3E621DE20C5800FFADD8 /* IRV.xcdatamodeld */; };
 		A97D3E661DE20C5800FFADD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A97D3E651DE20C5800FFADD8 /* Assets.xcassets */; };
 		A97D3E691DE20C5800FFADD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A97D3E671DE20C5800FFADD8 /* LaunchScreen.storyboard */; };
 		A97D3E741DE20C5900FFADD8 /* IRVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97D3E731DE20C5900FFADD8 /* IRVTests.swift */; };
 		A97D3E7F1DE20C5900FFADD8 /* IRVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97D3E7E1DE20C5900FFADD8 /* IRVUITests.swift */; };
+		B41B9EA31DECFEDA006D83CB /* DataManager+Voter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41B9EA21DECFEDA006D83CB /* DataManager+Voter.swift */; };
+		B48397181DECF907007A1A95 /* IRV.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B48397161DECF907007A1A95 /* IRV.xcdatamodeld */; };
+		B483971B1DECFA9D007A1A95 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B483971A1DECFA9D007A1A95 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +44,6 @@
 		A97D3E581DE20C5800FFADD8 /* IRV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97D3E5B1DE20C5800FFADD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A97D3E601DE20C5800FFADD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A97D3E631DE20C5800FFADD8 /* IRV.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IRV.xcdatamodel; sourceTree = "<group>"; };
 		A97D3E651DE20C5800FFADD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A97D3E681DE20C5800FFADD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A97D3E6A1DE20C5800FFADD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +53,9 @@
 		A97D3E7A1DE20C5900FFADD8 /* IRVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IRVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97D3E7E1DE20C5900FFADD8 /* IRVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRVUITests.swift; sourceTree = "<group>"; };
 		A97D3E801DE20C5900FFADD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B41B9EA21DECFEDA006D83CB /* DataManager+Voter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataManager+Voter.swift"; sourceTree = "<group>"; };
+		B48397171DECF907007A1A95 /* IRV.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IRV.xcdatamodel; sourceTree = "<group>"; };
+		B483971A1DECFA9D007A1A95 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,13 +107,11 @@
 			isa = PBXGroup;
 			children = (
 				A97D3E5B1DE20C5800FFADD8 /* AppDelegate.swift */,
-				A95A845C1DEA2065008BCA93 /* IRVViewController.swift */,
-				A95A845E1DEA525B008BCA93 /* VoterViewController.swift */,
-				A97D3E5F1DE20C5800FFADD8 /* Main.storyboard */,
+				B48397191DECF91A007A1A95 /* Interface */,
+				B48397151DECF886007A1A95 /* Database */,
 				A97D3E651DE20C5800FFADD8 /* Assets.xcassets */,
 				A97D3E671DE20C5800FFADD8 /* LaunchScreen.storyboard */,
 				A97D3E6A1DE20C5800FFADD8 /* Info.plist */,
-				A97D3E621DE20C5800FFADD8 /* IRV.xcdatamodeld */,
 				A91B13191DE8C96E0047E1F9 /* TODO */,
 			);
 			path = IRV;
@@ -131,6 +133,26 @@
 				A97D3E801DE20C5900FFADD8 /* Info.plist */,
 			);
 			path = IRVUITests;
+			sourceTree = "<group>";
+		};
+		B48397151DECF886007A1A95 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				B48397161DECF907007A1A95 /* IRV.xcdatamodeld */,
+				B483971A1DECFA9D007A1A95 /* DataManager.swift */,
+				B41B9EA21DECFEDA006D83CB /* DataManager+Voter.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		B48397191DECF91A007A1A95 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				A95A845C1DEA2065008BCA93 /* IRVViewController.swift */,
+				A95A845E1DEA525B008BCA93 /* VoterViewController.swift */,
+				A97D3E5F1DE20C5800FFADD8 /* Main.storyboard */,
+			);
+			path = Interface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,7 +223,7 @@
 				TargetAttributes = {
 					A97D3E571DE20C5800FFADD8 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 56G4CLYCRG;
+						DevelopmentTeam = KJM362W8LN;
 						ProvisioningStyle = Automatic;
 					};
 					A97D3E6E1DE20C5900FFADD8 = {
@@ -271,8 +293,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A97D3E5C1DE20C5800FFADD8 /* AppDelegate.swift in Sources */,
+				B483971B1DECFA9D007A1A95 /* DataManager.swift in Sources */,
+				B48397181DECF907007A1A95 /* IRV.xcdatamodeld in Sources */,
 				A95A845D1DEA2065008BCA93 /* IRVViewController.swift in Sources */,
-				A97D3E641DE20C5800FFADD8 /* IRV.xcdatamodeld in Sources */,
+				B41B9EA31DECFEDA006D83CB /* DataManager+Voter.swift in Sources */,
 				A95A845F1DEA525B008BCA93 /* VoterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +339,7 @@
 				A97D3E601DE20C5800FFADD8 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		A97D3E671DE20C5800FFADD8 /* LaunchScreen.storyboard */ = {
@@ -425,10 +450,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 56G4CLYCRG;
+				DEVELOPMENT_TEAM = KJM362W8LN;
 				INFOPLIST_FILE = IRV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.salempirates.IRV;
+				PRODUCT_BUNDLE_IDENTIFIER = io.islandtech.IRV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -438,10 +463,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 56G4CLYCRG;
+				DEVELOPMENT_TEAM = KJM362W8LN;
 				INFOPLIST_FILE = IRV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.salempirates.IRV;
+				PRODUCT_BUNDLE_IDENTIFIER = io.islandtech.IRV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -547,12 +572,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A97D3E621DE20C5800FFADD8 /* IRV.xcdatamodeld */ = {
+		B48397161DECF907007A1A95 /* IRV.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A97D3E631DE20C5800FFADD8 /* IRV.xcdatamodel */,
+				B48397171DECF907007A1A95 /* IRV.xcdatamodel */,
 			);
-			currentVersion = A97D3E631DE20C5800FFADD8 /* IRV.xcdatamodel */;
+			currentVersion = B48397171DECF907007A1A95 /* IRV.xcdatamodel */;
 			path = IRV.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
