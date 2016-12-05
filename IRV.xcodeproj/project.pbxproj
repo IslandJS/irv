@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A95A845D1DEA2065008BCA93 /* IRVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95A845C1DEA2065008BCA93 /* IRVViewController.swift */; };
 		A95A845F1DEA525B008BCA93 /* VoterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95A845E1DEA525B008BCA93 /* VoterViewController.swift */; };
+		A975660D1DF4F92B00C14190 /* UIColor+IRV.swift in Sources */ = {isa = PBXBuildFile; fileRef = A975660C1DF4F92B00C14190 /* UIColor+IRV.swift */; };
+		A975660F1DF4FAFF00C14190 /* String+IRV.swift in Sources */ = {isa = PBXBuildFile; fileRef = A975660E1DF4FAFF00C14190 /* String+IRV.swift */; };
 		A97D3E5C1DE20C5800FFADD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97D3E5B1DE20C5800FFADD8 /* AppDelegate.swift */; };
 		A97D3E611DE20C5800FFADD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A97D3E5F1DE20C5800FFADD8 /* Main.storyboard */; };
 		A97D3E661DE20C5800FFADD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A97D3E651DE20C5800FFADD8 /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 		A91B13191DE8C96E0047E1F9 /* TODO */ = {isa = PBXFileReference; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		A95A845C1DEA2065008BCA93 /* IRVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRVViewController.swift; sourceTree = "<group>"; };
 		A95A845E1DEA525B008BCA93 /* VoterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoterViewController.swift; sourceTree = "<group>"; };
+		A975660C1DF4F92B00C14190 /* UIColor+IRV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+IRV.swift"; sourceTree = "<group>"; };
+		A975660E1DF4FAFF00C14190 /* String+IRV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+IRV.swift"; sourceTree = "<group>"; };
 		A97D3E581DE20C5800FFADD8 /* IRV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97D3E5B1DE20C5800FFADD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A97D3E601DE20C5800FFADD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A975660B1DF4F8DF00C14190 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A975660C1DF4F92B00C14190 /* UIColor+IRV.swift */,
+				A975660E1DF4FAFF00C14190 /* String+IRV.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A97D3E4F1DE20C5800FFADD8 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +121,7 @@
 			children = (
 				A97D3E5B1DE20C5800FFADD8 /* AppDelegate.swift */,
 				B48397191DECF91A007A1A95 /* Interface */,
+				A975660B1DF4F8DF00C14190 /* Extensions */,
 				B48397151DECF886007A1A95 /* Database */,
 				A97D3E651DE20C5800FFADD8 /* Assets.xcassets */,
 				A97D3E671DE20C5800FFADD8 /* LaunchScreen.storyboard */,
@@ -293,10 +307,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A97D3E5C1DE20C5800FFADD8 /* AppDelegate.swift in Sources */,
+				A975660D1DF4F92B00C14190 /* UIColor+IRV.swift in Sources */,
 				B483971B1DECFA9D007A1A95 /* DataManager.swift in Sources */,
 				B48397181DECF907007A1A95 /* IRV.xcdatamodeld in Sources */,
 				A95A845D1DEA2065008BCA93 /* IRVViewController.swift in Sources */,
 				B41B9EA31DECFEDA006D83CB /* DataManager+Voter.swift in Sources */,
+				A975660F1DF4FAFF00C14190 /* String+IRV.swift in Sources */,
 				A95A845F1DEA525B008BCA93 /* VoterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

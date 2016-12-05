@@ -10,18 +10,24 @@ import UIKit
 
 class VoterViewController: IRVViewController {
     
-    
     // MARK: - Properties
     
     // MARK: - Outlets
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var voterLabel: UILabel!
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = "Voter"
+        
+        titleLabel.textColor = UIColor.irvRed
+        
+        voterLabel.textColor = UIColor.irvBlue
+        
         listVoters()
     }
     

@@ -16,7 +16,7 @@ class DataManager {
     
     // MARK: - Properties
     
-    typealias voidClosure = (Void) -> (Void)
+    typealias voidClosure = () -> ()
     lazy var persistentContainer: NSPersistentContainer = {
         
         let container = NSPersistentContainer(name: "IRV")
