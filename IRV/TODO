@@ -1,13 +1,21 @@
+Can create self
+Can create election
+    Can create candidate
+    Can create slate
+Can advertise election
+Can vote
+Can see vote status
+Can end election
+Can view results
+Can review older elections
+Can reuse candidates and slates
+
 Graphics:
-    Icon
     Wireframe
 
 Xcode:
-
     Structs for passing entities?
-
-    Core Data:
-
-    Game Kit:
+    Core Data
+        Delete rules
+    Game Kit
         Peer to Peer
-        Badging

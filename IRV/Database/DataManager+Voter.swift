@@ -52,6 +52,7 @@ extension DataManager {
                 nameStrings.forEach({ (nameString) in
                     let voter = IRVVoter(context: context)
                     voter.voterName = nameString
+                    voter.voterUUID = UUID().uuidString
                 })
                 
                 self.save(context: context)

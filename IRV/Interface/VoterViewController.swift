@@ -25,7 +25,6 @@ class VoterViewController: IRVViewController {
         title = "Voter"
         
         titleLabel.textColor = UIColor.irvRed
-        
         voterLabel.textColor = UIColor.irvBlue
         
         listVoters()
@@ -79,8 +78,7 @@ class VoterViewController: IRVViewController {
             
             var voterString = ""
             for voter in voters {
-                guard let voterName = voter.voterName else { continue }
-                voterString += voterName + "\r"
+                voterString += "\(voter.voterName!) - \(voter.voterUUID!)\r"
             }
             
             OperationQueue.main.addOperation {
