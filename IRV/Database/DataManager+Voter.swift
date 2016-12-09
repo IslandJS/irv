@@ -15,6 +15,15 @@ extension DataManager {
     
     typealias voterClosure = ([IRVVoter]) -> (Void)
     
+    // MARK: - User
+    
+    var currentVoter: IRVVoter? {
+        
+        guard let voterUUID = UserDefaults.standard.string(forKey: currentVoterUUIDKey) else { return nil }
+        return getVoter(voterUUID)
+        
+    }
+    
     // MARK: - Voters
     
     func deleteAllVoters(completion: @escaping voidClosure) {
@@ -80,6 +89,19 @@ extension DataManager {
             
         }
         
+    }
+    
+    func getVoter(_ uuid: String) -> IRVVoter? {
+        let context = persistentContainer.viewContext
+        let request: NSFetchRequest<IRVVoter> = IRVVoter.fetchRequest()
+        request.predicate = NSPredicate(format: "voterUUID == %@", uuid)
+        do {
+            let searchResults = try context.fetch(request)
+            return searchResults.first
+        } catch {
+            print("Error with request: \(error)")
+            return nil
+        }
     }
     
 }

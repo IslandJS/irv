@@ -14,38 +14,30 @@ class VoterViewController: IRVViewController {
     
     // MARK: - Outlets
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var voterLabel: UILabel!
-    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = "Voter"
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         
-        titleLabel.textColor = UIColor.irvRed
-        voterLabel.textColor = UIColor.irvBlue
+        super.viewDidAppear(animated)
         
-        listVoters()
+        if dataMan.currentVoter == nil {
+            performSegue(withIdentifier: createVoterSegue, sender: nil)
+        }
     }
     
     // MARK: - Actions
     
-    @IBAction func addAction(_ sender: Any) {
-        addVoters()
-    }
-    
-    @IBAction func listAction(_ sender: Any) {
-        listVoters()
-    }
-    
-    @IBAction func deleteAction(_ sender: Any) {
-        deleteVoters()
+    @IBAction func showCreateAction() {
+        performSegue(withIdentifier: createVoterSegue, sender: nil)
     }
     
     // MARK: - Voters
-    
+    /*
     func deleteVoters() {
         dataMan.deleteAllVoters {
             self.listVoters()
@@ -88,5 +80,5 @@ class VoterViewController: IRVViewController {
         }
         
     }
-    
+    */
 }

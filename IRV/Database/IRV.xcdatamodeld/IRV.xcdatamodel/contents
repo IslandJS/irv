@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16B2659" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16B2555" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="IRVBallot" representedClassName=".IRVBallot" syncable="YES" codeGenerationType="class">
         <attribute name="ballotComment" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="ballotCandidate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="IRVCandidate" inverseName="candidateBallots" inverseEntity="IRVCandidate" syncable="YES"/>
@@ -10,6 +10,7 @@
         <attribute name="candidateImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="candidateName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="candidateStatement" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="candidateUUID" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="candidateBallots" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="IRVBallot" inverseName="ballotCandidate" inverseEntity="IRVBallot" syncable="YES"/>
         <relationship name="candidateSlates" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="IRVSlate" inverseName="slateCandidates" inverseEntity="IRVSlate" syncable="YES"/>
     </entity>
@@ -33,13 +34,13 @@
         <attribute name="voterImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="voterName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="voterStatement" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="voterUUID" attributeType="String" syncable="YES"/>
+        <attribute name="voterUUID" attributeType="String" indexed="YES" syncable="YES"/>
         <relationship name="voterBallots" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="IRVBallot" inverseName="ballotVoter" inverseEntity="IRVBallot" syncable="YES"/>
         <relationship name="voterElections" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="IRVElection" inverseName="electionVoters" inverseEntity="IRVElection" syncable="YES"/>
     </entity>
     <elements>
         <element name="IRVBallot" positionX="0" positionY="45" width="128" height="105"/>
-        <element name="IRVCandidate" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="IRVCandidate" positionX="-63" positionY="-18" width="128" height="135"/>
         <element name="IRVElection" positionX="-36" positionY="9" width="128" height="150"/>
         <element name="IRVSlate" positionX="-54" positionY="-9" width="128" height="120"/>
         <element name="IRVVoter" positionX="-18" positionY="27" width="128" height="133"/>

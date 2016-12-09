@@ -10,12 +10,17 @@ Can view results
 Can review older elections
 Can reuse candidates and slates
 
-Graphics:
-    Wireframe
-
 Xcode:
-    Structs for passing entities?
     Core Data
+        Structs for passing entities?
         Delete rules
-    Game Kit
+        Merge rules
+    Voting
         Peer to Peer
+        Internet
+    Input
+        Can Voter/Candidate use the same VC to add/edit/view (yes)
+        Edit permissions
+        Should Candidate be copied to Slate
+        Photo import workflow
+        Clamshell text input

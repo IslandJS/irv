@@ -17,9 +17,12 @@
 		A97D3E691DE20C5800FFADD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A97D3E671DE20C5800FFADD8 /* LaunchScreen.storyboard */; };
 		A97D3E741DE20C5900FFADD8 /* IRVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97D3E731DE20C5900FFADD8 /* IRVTests.swift */; };
 		A97D3E7F1DE20C5900FFADD8 /* IRVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97D3E7E1DE20C5900FFADD8 /* IRVUITests.swift */; };
+		A98176E81DF65BBB00353F46 /* CreateVoterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98176E71DF65BBB00353F46 /* CreateVoterViewController.swift */; };
+		A98176EB1DF65CA000353F46 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98176EA1DF65CA000353F46 /* Constants.swift */; };
 		B41B9EA31DECFEDA006D83CB /* DataManager+Voter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41B9EA21DECFEDA006D83CB /* DataManager+Voter.swift */; };
 		B48397181DECF907007A1A95 /* IRV.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B48397161DECF907007A1A95 /* IRV.xcdatamodeld */; };
 		B483971B1DECFA9D007A1A95 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B483971A1DECFA9D007A1A95 /* DataManager.swift */; };
+		B4A4B1A01DF9B86700FC6CA4 /* UIView+IRV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A4B19F1DF9B86700FC6CA4 /* UIView+IRV.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,9 +60,12 @@
 		A97D3E7A1DE20C5900FFADD8 /* IRVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IRVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97D3E7E1DE20C5900FFADD8 /* IRVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRVUITests.swift; sourceTree = "<group>"; };
 		A97D3E801DE20C5900FFADD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A98176E71DF65BBB00353F46 /* CreateVoterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateVoterViewController.swift; sourceTree = "<group>"; };
+		A98176EA1DF65CA000353F46 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B41B9EA21DECFEDA006D83CB /* DataManager+Voter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataManager+Voter.swift"; sourceTree = "<group>"; };
 		B48397171DECF907007A1A95 /* IRV.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IRV.xcdatamodel; sourceTree = "<group>"; };
 		B483971A1DECFA9D007A1A95 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		B4A4B19F1DF9B86700FC6CA4 /* UIView+IRV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+IRV.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,7 @@
 			children = (
 				A975660C1DF4F92B00C14190 /* UIColor+IRV.swift */,
 				A975660E1DF4FAFF00C14190 /* String+IRV.swift */,
+				B4A4B19F1DF9B86700FC6CA4 /* UIView+IRV.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -122,6 +129,7 @@
 				A97D3E5B1DE20C5800FFADD8 /* AppDelegate.swift */,
 				B48397191DECF91A007A1A95 /* Interface */,
 				A975660B1DF4F8DF00C14190 /* Extensions */,
+				A98176E91DF65C7600353F46 /* Utilities */,
 				B48397151DECF886007A1A95 /* Database */,
 				A97D3E651DE20C5800FFADD8 /* Assets.xcassets */,
 				A97D3E671DE20C5800FFADD8 /* LaunchScreen.storyboard */,
@@ -149,6 +157,14 @@
 			path = IRVUITests;
 			sourceTree = "<group>";
 		};
+		A98176E91DF65C7600353F46 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A98176EA1DF65CA000353F46 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		B48397151DECF886007A1A95 /* Database */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +180,7 @@
 			children = (
 				A95A845C1DEA2065008BCA93 /* IRVViewController.swift */,
 				A95A845E1DEA525B008BCA93 /* VoterViewController.swift */,
+				A98176E71DF65BBB00353F46 /* CreateVoterViewController.swift */,
 				A97D3E5F1DE20C5800FFADD8 /* Main.storyboard */,
 			);
 			path = Interface;
@@ -307,9 +324,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A97D3E5C1DE20C5800FFADD8 /* AppDelegate.swift in Sources */,
+				A98176E81DF65BBB00353F46 /* CreateVoterViewController.swift in Sources */,
 				A975660D1DF4F92B00C14190 /* UIColor+IRV.swift in Sources */,
 				B483971B1DECFA9D007A1A95 /* DataManager.swift in Sources */,
+				B4A4B1A01DF9B86700FC6CA4 /* UIView+IRV.swift in Sources */,
 				B48397181DECF907007A1A95 /* IRV.xcdatamodeld in Sources */,
+				A98176EB1DF65CA000353F46 /* Constants.swift in Sources */,
 				A95A845D1DEA2065008BCA93 /* IRVViewController.swift in Sources */,
 				B41B9EA31DECFEDA006D83CB /* DataManager+Voter.swift in Sources */,
 				A975660F1DF4FAFF00C14190 /* String+IRV.swift in Sources */,
