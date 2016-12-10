@@ -26,14 +26,28 @@ class VoterViewController: IRVViewController {
         super.viewDidAppear(animated)
         
         if dataMan.currentVoter == nil {
-            performSegue(withIdentifier: createVoterSegue, sender: nil)
+            performSegue(withIdentifier: SegueNames.createVoter, sender: nil)
         }
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // No idea, no problem
+        guard let segueID = segue.identifier else { return }
+        
+        // Segue to ThingViewController
+        if segueID == SegueNames.createVoter && segue.destination is ThingViewController {
+                (segue.destination as? ThingViewController)?.thingType = ThingViewController.ThingType.candidate
+        }
+        
     }
     
     // MARK: - Actions
     
     @IBAction func showCreateAction() {
-        performSegue(withIdentifier: createVoterSegue, sender: nil)
+        performSegue(withIdentifier: SegueNames.createVoter, sender: nil)
     }
     
     // MARK: - Voters

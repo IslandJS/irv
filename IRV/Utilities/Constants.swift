@@ -8,5 +8,8 @@
 
 import Foundation
 
-let createVoterSegue = "createVoterSegue"
+struct SegueNames {
+    static let createVoter    = "createVoterSegue"
+}
+
 let currentVoterUUIDKey = "currentVoterUUIDKey"

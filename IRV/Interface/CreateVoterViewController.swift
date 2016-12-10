@@ -10,14 +10,20 @@ import UIKit
 
 class CreateVoterViewController: IRVViewController {
     
+    // MARK: - Enum
+    
+    enum ThingType {
+        case voter
+        case candidate
+    }
     
     // MARK: - Properties
+    
+    // MARK: - Outlets
     
     @IBOutlet weak var voterImageView: UIImageView!
     @IBOutlet weak var voterNameTextField: UITextField!
     @IBOutlet weak var voterStateTextView: UITextView!
-    
-    // MARK: - Outlets
     
     // MARK: - Lifecycle
     
